@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.head_ref }}
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
